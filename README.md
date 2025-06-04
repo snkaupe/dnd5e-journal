@@ -4,7 +4,7 @@ A player's journal for DnD 5e characters meant for binding into a book.
 
 ## What is this?
 
-This project contains a Typst file that, when compiled, generates a player's journal for several Dungeons & Dragons 5th Edition characters. The generated pages are of A6 size, as this character sheet is meant to be bound into a small book and this size allows you to use ordinary A4 printer paper in the correct grain direction.
+This project contains a Typst file that, when compiled, generates a player's journal for several Dungeons & Dragons 5th Edition characters. The generated pages are of A6 size, as this character sheet is meant to be bound into a small book and this size allows you to use ordinary A4 printer paper in the [correct grain direction](https://blog.papercraftpanda.com/the-most-important-rule-in-bookbinding-grain-direction/).
 
 ## Current State
 
