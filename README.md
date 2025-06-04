@@ -4,11 +4,11 @@ A player's journal for DnD 5e characters meant for binding into a book.
 
 ## What is this?
 
-This project contains a Typst file that, when compiled, generates a player's journal for several Dungeons & Dragons 5th Edition characters. The generated pages are of A6 size, as this character sheet is meant to be bound into a small book and this size allows you to use ordinary A4 printer paper in the [correct grain direction](https://blog.papercraftpanda.com/the-most-important-rule-in-bookbinding-grain-direction/).
+This project contains a Typst file that, when compiled, generates a player's journal for several *Dungeons & Dragons 5th Edition* characters. The generated pages are of A6 size, as this character sheet is meant to be bound into a small book and this size allows you to use ordinary A4 printer paper in the [correct grain direction](https://blog.papercraftpanda.com/the-most-important-rule-in-bookbinding-grain-direction/).
 
 ## Current State
 
-**Heabily** WIP. Only small parts of the typical character sheet have been provided yet. At the moment, this is closer to a proof-of-concept than anything resembling a finished product.
+**Heavily** WIP. Only small parts of the typical character sheet have been provided yet. At the moment, this is closer to a proof-of-concept than anything resembling a finished product.
 
 ## How to Use
 
@@ -17,7 +17,7 @@ TODO: Write properly
 - Turn into PDF using Typst
   - use `just c[ompile]` to generate the PDF using the included font files
   - you can switch between using the serif or sans font using `just serif`and `just sans`
-- Throw into BookbinderJS to turn into signatures for binding
+- Throw into [BookbinderJS](https://momijizukamori.github.io/bookbinder-js) to turn into signatures for binding (A4 paper, Quarto size)
 - Print on A4 paper using appropriate settings (mirroring along short side, IIRC)
 - Bind into book using a method of your choosing
 
