@@ -34,7 +34,7 @@
   [
     #place(top + left, dx: dx, dy: dy, [
       #rect(width: 2cm, height: 2cm, radius: 2mm, [
-        #align(center, [#text(size: 7pt, [#smallcaps([#stat])])])
+        #align(center, [#text(size: 7pt, [#smallcaps[#stat]])])
       ])
     ])
     #place(top + left, dx: dx + 0.6cm, dy: dy + 1.6cm, [
@@ -71,7 +71,7 @@
     #rect(width: width, height: height, radius: 2mm, [
       #place(center, dy: -0.45cm, [
         #rect(fill: white, stroke: black, radius: 2mm, [
-          #smallcaps([#title])
+          #smallcaps[#title]
         ])
       ])
       #v(0.4cm)
@@ -83,7 +83,7 @@
 #page(numbering: none, [
   #align(center, [
     #v(2cm)
-    #text(size: 16pt, [#smallcaps([Character Journal])])
+    #text(size: 16pt, [#smallcaps[Character Journal]])
     #v(3cm)
     #linebreak()
     This journal belongs to
@@ -97,7 +97,7 @@
 
 #page(numbering: none, [
   #outline(
-    title: [#smallcaps([Contents])]
+    title: [#smallcaps[Contents]]
   )
 ])
 
@@ -111,7 +111,7 @@
 = Character 1
 #align(center, [
   #v(1cm)
-  #text(size: 7pt, [#smallcaps([Character 1])])
+  #text(size: 7pt, [#smallcaps[Character 1]])
   #v(40%)
   #line(length: 85%, stroke: .5pt + black)
 ])
