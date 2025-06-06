@@ -23,6 +23,7 @@
 
 #set text(
   size: 9pt,
+  lang: "en",
   font: "Alegreya"
 )
 
