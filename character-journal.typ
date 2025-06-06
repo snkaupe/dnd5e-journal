@@ -1,13 +1,18 @@
-#let lines = tiling(size: (10cm, 1.0cm), )[
+#let lines = tiling(size: (10cm, 8mm), )[
   #place(line(start: (0%, 0%), end: (100%, 0%), stroke: 1pt))
 ]
 
-#let lined_page() = {
+#let linedpage(title: "") = {
+  let skip = 11mm
   [
-    #page([
-      #v(1.25cm)
+    #page()[
+      #if title != "" {
+        [#align(center)[#text(size: 7pt)[#title]]]
+        skip = 6mm
+      }
+      #v(skip)
       #rect(fill: lines, width: 100%, height: 90%)
-    ])
+    ]
   ]
 }
 
@@ -175,9 +180,10 @@
 
 #pagebreak()
 == Notes
-#lined_page()
-#lined_page()
-#lined_page()
-#lined_page()
-#lined_page()
-#lined_page()
+#pagebreak()
+#linedpage(title:[Notes])
+#linedpage()
+#linedpage()
+#linedpage()
+#linedpage()
+#linedpage()
