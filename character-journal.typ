@@ -5,7 +5,7 @@
 #let linedpage(title: "") = {
   let skip = 11mm
   [
-    #page()[
+    #page[
       #if title != "" {
         [#align(center)[#text(size: 7pt)[#title]]]
         skip = 6mm
@@ -72,7 +72,7 @@
   ]
 }
 
-#let titledbox(title, content, width: auto, height: auto) = {
+#let titledbox(title, content, width: auto, height: auto, skip: 4mm) = {
   [
     #rect(width: width, height: height, radius: 2mm)[
       #place(center, dy: -0.45cm)[
@@ -80,8 +80,43 @@
           #smallcaps[#title]
         ]
       ]
-      #v(0.4cm)
+      #v(skip)
       #content
+    ]
+  ]
+}
+
+#let npcblock() = {
+  [
+    #grid(
+      stroke: (x, y) => {
+        if x == 1 {
+          (bottom: .5pt + black)
+        }
+      },
+      align: left,
+      columns: (auto, 1fr),
+      inset: (top: 6mm, right: 2mm, bottom: 1mm, left: 0mm),
+      [Name:],
+      [],
+      [Location:],
+      []
+    )
+  ]
+}
+
+#let npcpage() = {
+  [
+    #page[
+      #align(center)[
+        #titledbox([NPC], width: 100%, height: 48%, skip: 0mm)[
+          #npcblock()
+        ]
+        #v(1mm)
+        #titledbox([NPC], width: 100%, height: 48%, skip: 0mm)[
+          #npcblock()
+        ]
+      ]
     ]
   ]
 }
@@ -177,13 +212,17 @@
 ]
 
 #pagebreak()
+== NPCs
+
+#npcpage()
+#npcpage()
+
+#pagebreak()
 
 #pagebreak()
 == Notes
 #pagebreak()
 #linedpage(title:[Notes])
-#linedpage()
-#linedpage()
 #linedpage()
 #linedpage()
 #linedpage()
