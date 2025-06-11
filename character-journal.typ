@@ -217,9 +217,6 @@
 #npcpage()
 #npcpage()
 
-#pagebreak()
-
-#pagebreak()
 == Notes
 #pagebreak()
 #linedpage(title:[Notes])
