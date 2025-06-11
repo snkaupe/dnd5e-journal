@@ -75,9 +75,15 @@
 #let titledbox(title, content, width: auto, height: auto, skip: 4mm) = {
   [
     #rect(width: width, height: height, radius: 2mm)[
-      #place(center, dy: -0.45cm)[
-        #rect(fill: white, stroke: black, radius: 2mm)[
-          #smallcaps[#title]
+      #if title != none and title != [] [
+        #place(center, dy: -4.5mm)[
+          #rect(fill: white, stroke: black, radius: 2mm)[
+            #smallcaps[#title]
+          ]
+        ]
+      ] else [
+        #place(center, dy: -5.7mm)[
+          #rect(fill: white, stroke: black, radius: 2mm, width: 80%, height: 8mm)[]
         ]
       ]
       #v(skip)
@@ -97,8 +103,8 @@
       align: left,
       columns: (auto, 1fr),
       inset: (top: 6mm, right: 2mm, bottom: 1mm, left: 0mm),
-      [Name:],
-      [],
+      // [Name:],
+      // [],
       [Location:],
       []
     )
@@ -109,11 +115,11 @@
   [
     #page[
       #align(center)[
-        #titledbox([NPC], width: 100%, height: 48%, skip: 0mm)[
+        #titledbox([], width: 100%, height: 47%, skip: 0mm)[
           #npcblock()
         ]
-        #v(1mm)
-        #titledbox([NPC], width: 100%, height: 48%, skip: 0mm)[
+        #v(2mm)
+        #titledbox([], width: 100%, height: 47%, skip: 0mm)[
           #npcblock()
         ]
       ]
