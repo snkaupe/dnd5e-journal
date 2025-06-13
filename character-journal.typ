@@ -98,15 +98,17 @@
     #grid(
       //stroke: .5pt + green,
       align: left,
-      columns: (1.4cm, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr),
+      columns: (1.55cm, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr),
       inset: (top: 3mm, right: 0mm, bottom: 1mm, left: 0mm),
       // [Name:],
       // [],
       grid.cell(colspan: 1)[Location:],
       grid.cell(colspan: 7)[#v(3mm)#line(length: 100%, stroke: .5pt)],
-      grid.cell(colspan: 6)[#grid(columns: (1.11cm, auto), inset: (left: 0mm, right: 2mm), [Species:], grid.cell(inset: (left: 2.9mm))[#v(3mm)#line(length: 100%, stroke: .5pt)])],
+      grid.cell(colspan: 6)[#grid(columns: (1.26cm, auto), inset: (left: 0mm, right: 2mm), [Species:], grid.cell(inset: (left: 2.9mm))[#v(3mm)#line(length: 100%, stroke: .5pt)])],
       grid.cell(colspan: 2)[#grid(columns: (auto, auto), [Age:], [#v(3mm)#line(length: 100%, stroke: .5pt)])],
       grid.cell(colspan: 1)[Notable:],
+      grid.cell(colspan: 7)[#v(3mm)#line(length: 100%, stroke: .5pt)],
+      grid.cell(colspan: 1)[Affilliation:],
       grid.cell(colspan: 7)[#v(3mm)#line(length: 100%, stroke: .5pt)],
     )
   ]
