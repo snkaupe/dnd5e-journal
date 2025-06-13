@@ -83,7 +83,7 @@
         ]
       ] else [
         #place(center, dy: -5.7mm)[
-          #rect(fill: white, stroke: black, radius: 2mm, width: 80%, height: 8mm)[]
+          #rect(fill: white, stroke: black, radius: 2mm, width: 90%, height: 8mm)[]
         ]
       ]
       #v(skip)
@@ -94,19 +94,20 @@
 
 #let npcblock() = {
   [
+    #v(3mm)
     #grid(
-      stroke: (x, y) => {
-        if x == 1 {
-          (bottom: .5pt + black)
-        }
-      },
+      //stroke: .5pt + green,
       align: left,
-      columns: (auto, 1fr),
-      inset: (top: 6mm, right: 2mm, bottom: 1mm, left: 0mm),
+      columns: (1.5cm, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr),
+      inset: (top: 3mm, right: 0mm, bottom: 1mm, left: 0mm),
       // [Name:],
       // [],
-      [Location:],
-      []
+      grid.cell(colspan: 1)[Location:],
+      grid.cell(colspan: 7)[#v(3mm)#line(length: 100%, stroke: .5pt)],
+      grid.cell(colspan: 6)[#grid(columns: (1.22cm, auto), inset: (left: 0mm, right: 2mm), [Species:], grid.cell(inset: (left: 2.9mm))[#v(3mm)#line(length: 100%, stroke: .5pt)])],
+      grid.cell(colspan: 2)[#grid(columns: (auto, auto), [Age:], [#v(3mm)#line(length: 100%, stroke: .5pt)])],
+      grid.cell(colspan: 1)[Notable:],
+      grid.cell(colspan: 7)[#v(3mm)#line(length: 100%, stroke: .5pt)],
     )
   ]
 }
