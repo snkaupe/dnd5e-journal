@@ -65,16 +65,16 @@
 #let skillline(name) = {
   [
     #stack(dir: ltr, spacing: 1.0mm,
-      align(horizon)[#circle(radius: 0.8mm, stroke: 0.5pt + black)],
-      align(bottom)[#move(dy: 1.0mm)[#line(length: 4mm, stroke: 0.5pt + black)]],
-      text(size: 8pt)[#name],
+      align(left + horizon)[#circle(radius: 0.8mm, stroke: 0.5pt + black)],
+      align(left + bottom)[#move(dy: 1.0mm)[#line(length: 4mm, stroke: 0.5pt + black)]],
+      align(left, text(size: 8pt)[#name]),
     )
   ]
 }
 
-#let titledbox(title, content, width: auto, height: auto, skip: 4mm) = {
+#let titledbox(title, content, width: auto, height: auto, skip: 4mm, inset: 0% + 5pt) = {
   [
-    #rect(width: width, height: height, radius: 2mm)[
+    #rect(width: width, height: height, radius: 2mm, inset: inset)[
       #if title != none and title != [] [
         #place(center, dy: -4.5mm)[
           #rect(fill: white, stroke: black, radius: 2mm)[
@@ -183,18 +183,21 @@
 
 #v(8.0cm)
 
-#titledbox([Saving Throws], width: 100%, height: 2.3cm)[
-  #columns(2)[
-    #skillline[Strength]
-    #skillline[Dexterity]
-    #skillline[Constitution]
-    #skillline[Intelligence]
-    #skillline[Wisdom]
-    #skillline[Charisma]
+#align(center)[
+  #titledbox([Saving Throws], width: 5.2cm, height: 2.3cm)[
+    #columns(2)[
+      #skillline[Strength]
+      #skillline[Dexterity]
+      #skillline[Constitution]
+      #skillline[Intelligence]
+      #skillline[Wisdom]
+      #skillline[Charisma]
+    ]
   ]
 ]
 
 #pagebreak()
+
 == Skills
 
 #titledbox([Skills], width: 100%, height: 5.7cm)[
@@ -220,6 +223,37 @@
   ]
 ]
 
+#v(3mm)
+
+#titledbox([Proficiencies], width: 100%)[]
+
+
+#pagebreak()
+
+== Combat
+
+#align(center)[
+  #titledbox([Hitpoints], skip: 2mm, inset: .5mm)[
+    #place(dx: 20mm, dy: 6.6mm, rect(width: 2mm, height: 3.5mm))
+    #place(dx: 48mm, dy: 6.6mm, rect(width: 2mm, height: 3.5mm))
+    #grid(
+      align: center,
+      //stroke: 1pt + green,
+      columns: (2.1cm, 2.8cm, 2.1cm),
+      inset: 1mm,
+      rect(width: 100%, height: 1.5cm, radius: 2mm)[
+        #align(center)[#text(size: 7pt, [#smallcaps[Maximum]])]
+      ],
+      rect(width: 100%, height: 1.5cm, radius: 2mm)[
+        #align(center)[#text(size: 7pt, [#smallcaps[Current]])]
+      ],
+      rect(width: 100%, height: 1.5cm, radius: 2mm)[
+        #align(center)[#text(size: 7pt, [#smallcaps[Temporary]])]
+      ]
+    )
+  ]
+]
+
 #pagebreak()
 == NPCs
 
@@ -232,3 +266,114 @@
 #linedpage()
 #linedpage()
 #linedpage()
+
+#pagebreak()
+
+#show heading: it => [#align(center)[#text(size: 1.2em)[#it.body]]]
+== Tests & Experiments
+
+#align(center)[
+  #block[
+    #rect(width: 5cm, height: 3cm)
+    #place(
+      dx: 0mm,
+      dy: 0mm,
+      curve(
+        fill: white,
+        stroke: 1pt + black,
+        curve.line((0mm, 1mm)),
+        curve.line((-1mm, 1mm)),
+        curve.line((-1mm, 0mm)),
+        curve.close()
+      )
+    )
+    #place(
+      dx: 100% + 1mm,
+      dy: 0mm,
+      curve(
+        fill: white,
+        stroke: 1pt + black,
+        curve.line((0mm, 1mm)),
+        curve.line((-1mm, 1mm)),
+        curve.line((-1mm, 0mm)),
+        curve.close()
+      )
+    )
+    #place(
+      dx: 100% + 1mm,
+      dy: -100% - 1mm,
+      curve(
+        fill: white,
+        stroke: 1pt + black,
+        curve.line((0mm, 1mm)),
+        curve.line((-1mm, 1mm)),
+        curve.line((-1mm, 0mm)),
+        curve.close()
+      )
+    )
+    #place(
+      dx: 0mm,
+      dy: -100% - 1mm,
+      curve(
+        fill: white,
+        stroke: 1pt + black,
+        curve.line((0mm, 1mm)),
+        curve.line((-1mm, 1mm)),
+        curve.line((-1mm, 0mm)),
+        curve.close()
+      )
+    )
+  ]
+]
+
+#v(.25cm)
+#align(center)[
+  #block[
+    #rect(width: 5cm, height: 3cm, stroke: none)
+    #place(
+      dx: 0mm,
+      dy: 0mm,
+      curve(
+        fill: white,
+        stroke: 1pt + black,
+        curve.move((0cm + 1mm, 0cm + 0mm)),
+        curve.line((5cm - 1mm, 0cm + 0mm)),
+        curve.line((5cm - 1mm, 0cm - 1mm)),
+        curve.line((5cm - 0mm, 0cm - 1mm)),
+        curve.line((5cm - 0mm, -3cm + 1mm)),
+        curve.line((5cm - 1mm, -3cm + 1mm)),
+        curve.line((5cm - 1mm, -3cm + 0mm)),
+        curve.line((0cm + 1mm, -3cm + 0mm)),
+        curve.line((0cm + 1mm, -3cm + 1mm)),
+        curve.line((0cm + 0mm, -3cm + 1mm)),
+        curve.line((0cm + 0mm, 0cm - 1mm)),
+        curve.line((0cm + 1mm, 0cm - 1mm)),
+        curve.close()
+      )
+    )
+  ]
+]
+
+#v(.25cm)
+#align(center)[
+  #block[
+    #rect(width: 5cm, height: 3cm, stroke: none)
+    #place(
+      dx: 0mm,
+      dy: 0mm,
+      curve(
+        fill: white,
+        stroke: 1pt + black,
+        curve.move((5cm - 1mm, 0cm + 0mm)),
+        curve.quad((5cm - 1mm, 0cm - 1mm), (5cm - 0mm, 0cm - 1mm)),
+        curve.line((5cm - 0mm, -3cm + 1mm)),
+        curve.quad((5cm - 1mm, -3cm + 1mm), (5cm - 1mm, -3cm + 0mm)),
+        curve.line((0cm + 1mm, -3cm + 0mm)),
+        curve.quad((0cm + 1mm, -3cm + 1mm), (0cm + 0mm, -3cm + 1mm)),
+        curve.line((0cm + 0mm, 0cm - 1mm)),
+        curve.quad((0cm + 1mm, 0cm - 1mm), (0cm + 1mm, 0cm - 0mm)),
+        curve.close(mode: "straight")
+      )
+    )
+  ]
+]
