@@ -74,15 +74,16 @@
 
 #let titledbox(title, content, width: auto, height: auto, skip: 4mm, inset: 0% + 5pt) = {
   [
+    #let default_inset = 0% + 5pt
     #rect(width: width, height: height, radius: 2mm, inset: inset)[
       #if title != none and title != [] [
-        #place(center, dy: -4.5mm)[
+        #place(center, dy: -4.5mm + (default_inset - inset))[
           #rect(fill: white, stroke: black, radius: 2mm)[
             #smallcaps[#title]
           ]
         ]
       ] else [
-        #place(center, dy: -5.7mm)[
+        #place(center, dy: -5.7mm + (default_inset - inset))[
           #rect(fill: white, stroke: black, radius: 2mm, width: 90%, height: 8mm)[]
         ]
       ]
@@ -233,7 +234,7 @@
 == Combat
 
 #align(center)[
-  #titledbox([Hitpoints], skip: 2mm, inset: .5mm)[
+  #titledbox([Hitpoints], skip: 2mm, inset: 1mm)[
     #place(dx: 20mm, dy: 6.6mm, rect(width: 2mm, height: 3.5mm))
     #place(dx: 48mm, dy: 6.6mm, rect(width: 2mm, height: 3.5mm))
     #grid(
