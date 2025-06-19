@@ -106,9 +106,9 @@
       grid.cell(colspan: 7)[#v(3mm)#line(length: 100%, stroke: .5pt)],
       grid.cell(colspan: 6)[#grid(columns: (1.26cm, auto), inset: (left: 0mm, right: 2mm), [Species:], grid.cell(inset: (left: 2.9mm))[#v(3mm)#line(length: 100%, stroke: .5pt)])],
       grid.cell(colspan: 2)[#grid(columns: (auto, auto), [Age:], [#v(3mm)#line(length: 100%, stroke: .5pt)])],
-      grid.cell(colspan: 1)[Notable:],
-      grid.cell(colspan: 7)[#v(3mm)#line(length: 100%, stroke: .5pt)],
       grid.cell(colspan: 1)[Affilliation:],
+      grid.cell(colspan: 7)[#v(3mm)#line(length: 100%, stroke: .5pt)],
+      grid.cell(colspan: 1)[Notable:],
       grid.cell(colspan: 7)[#v(3mm)#line(length: 100%, stroke: .5pt)],
     )
   ]
