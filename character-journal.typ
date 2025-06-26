@@ -1,6 +1,11 @@
-#let lines = tiling(size: (10cm, 8mm), )[
-  #place(line(start: (0%, 0%), end: (100%, 0%), stroke: 1pt))
-]
+#let lines(spacing: 8mm) = {
+    tiling(size: (10cm, spacing), )[
+      #place(line(start: (0%, 0%), end: (100%, 0%), stroke: 1pt))
+    ]
+}
+// #let lines = tiling(size: (10cm, 8mm), )[
+//   #place(line(start: (0%, 0%), end: (100%, 0%), stroke: 1pt))
+// ]
 
 #let linedpage(title: "") = {
   let skip = 11mm
@@ -11,7 +16,7 @@
         skip = 6mm
       }
       #v(skip)
-      #rect(fill: lines, width: 100%, height: 90%)
+      #rect(fill: lines(), width: 100%, height: 90%)
     ]
   ]
 }
@@ -199,7 +204,9 @@
 
 #pagebreak()
 
-== Skills
+#pagebreak()
+
+== Skills & Proficiencies
 
 #titledbox([Skills], width: 100%, height: 5.7cm)[
   #columns(2)[
@@ -226,7 +233,15 @@
 
 #v(3mm)
 
-#titledbox([Proficiencies], width: 100%)[]
+#titledbox([Proficiencies], width: 100%, height: 6cm)[
+  #grid(
+    columns: (1fr, 1fr),
+    column-gutter: 2mm,
+    inset: (top: 4mm),
+    rect(fill: lines(spacing: 6mm), width: 100%, height: 95%),
+    rect(fill: lines(spacing: 6mm), width: 100%, height: 95%),
+  )
+]
 
 
 #pagebreak()
