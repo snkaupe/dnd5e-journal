@@ -44,7 +44,7 @@
 #let statbox(stat, dx: 0cm, dy: 0cm) = {
   [
     #place(top + left, dx: dx, dy: dy)[
-      #rect(width: 2cm, height: 2cm, radius: 2mm)[
+      #rect(width: 2cm, height: 2cm, radius: 2mm, fill: white, stroke: 1pt + black)[
         #align(center)[#text(size: 7pt, [#smallcaps[#stat]])]
       ]
     ]
@@ -203,6 +203,52 @@
 ]
 
 #pagebreak()
+
+#align(center)[
+  #v(3.5cm)
+  #image("img/standing-human-body-silhouette-svgrepo-com-cc0.svg", width: 50%)
+]
+#place(dx: 1.2cm, dy: -3.8cm)[
+  #line(start: (0cm, 0cm), end: (2cm, 0.5cm))
+]
+#place(dx: 6.3cm, dy: -3.8cm)[
+  #line(start: (0cm, 0cm), end: (-2cm, 0.5cm))
+]
+#place(dx: 4.9cm, dy: -6.1cm)[
+  #line(start: (0cm, 0cm), end: (-1cm, 2cm))
+]
+#place(dx: 2.6cm, dy: -6.1cm)[
+  #line(start: (0cm, 0cm), end: (1cm, 2cm))
+]
+#place(dx: 1.7cm, dy: -1.3cm)[
+  #line(start: (0cm, 0cm), end: (1.2cm, -0.7cm))
+]
+#place(dx: 5.8cm, dy: -1.3cm)[
+  #line(start: (0cm, 0cm), end: (-1.2cm, -0.7cm))
+]
+#statbox(dx: 1.5cm, dy: 0.5cm)[Intelligence]
+#statbox(dx: 4.0cm, dy: 0.5cm)[Wisdom]
+#statbox(dx: 0.0cm, dy: 3.0cm)[Constitution]
+#statbox(dx: 5.5cm, dy: 3.0cm)[Charisma]
+#statbox(dx: 0.5cm, dy: 5.7cm)[Strength]
+#statbox(dx: 5.0cm, dy: 5.7cm)[Dexterity]
+
+// #thermo(dx: -0.9cm, dy: 8.5cm)[Proficiency Modifier]
+// #thermo(dx: 0.6cm, dy: 9.6cm)[Passive Perception]
+
+#v(1.2cm)
+#align(center)[
+  #titledbox([Saving Throws], width: 5.2cm, height: 2.3cm)[
+    #columns(2)[
+      #skillline[Strength]
+      #skillline[Dexterity]
+      #skillline[Constitution]
+      #skillline[Intelligence]
+      #skillline[Wisdom]
+      #skillline[Charisma]
+    ]
+  ]
+]
 
 #pagebreak()
 

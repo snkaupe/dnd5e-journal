@@ -34,3 +34,5 @@ Anyway, this gave me the inspiration for an actual project that I can turn into 
 This repository contains copies of the excellent [Alegreya](https://www.huertatipografica.com/en/fonts/alegreya-ht-pro) and [Alegreya Sans](https://www.huertatipografica.com/en/fonts/alegreya-sans-ht) font families by [Huerta Tipográfica](https://www.huertatipografica.com/en), licensed under the Open Font License (OFL).
 
 Thanks to the awesome people over at GlassStaff for the inspiration. Also, my wife loves the roleplaying stickers you add into orders (and I have to agree, the kitten warrior is incredibly cute).
+
+*Standing Human Body Silhouette* by [SVG Repo](https://www.svgrepo.com/svg/76394/standing-human-body-silhouette), licensed under [CC0](https://www.svgrepo.com/page/licensing/#CC0).
