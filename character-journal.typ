@@ -295,7 +295,7 @@
 #pagebreak()
 
 #align(center)[
-  #titledbox([Language Proficiencies], width: 100%, skip: 0mm)[
+  #titledbox([Language Proficiencies], width: 100%, height: 7.7cm, skip: 0mm)[
     #grid(
       columns: (1fr, 1fr, 1fr),
       column-gutter: 2mm,
