@@ -12,7 +12,7 @@
   [
     #page[
       #if title != "" {
-        [#align(center)[#text(size: 7pt)[#title]]]
+        [#align(center)[#text(size: 8pt)[#title]]]
         skip = 6mm
       }
       #v(skip)
@@ -22,17 +22,18 @@
 }
 
 #set page(
-  paper: "a6",
+  width: 12cm,
+  height: 16cm,
   numbering: "- 1 -",
   margin: (
-    inside: 2cm,
-    outside: 1cm,
-    y: 1cm
+    inside: 2.0cm,
+    outside: 1.2cm,
+    y: 1.2cm
   ),
 )
 
 #set text(
-  size: 9pt,
+  size: 10pt,
   lang: "en",
   font: "Alegreya"
 )
@@ -67,12 +68,12 @@
   ]
 }
 
-#let skillline(name) = {
+#let skillline(name, linelength: 4mm) = {
   [
     #stack(dir: ltr, spacing: 1.0mm,
       align(left + horizon)[#circle(radius: 0.8mm, stroke: 0.5pt + black)],
-      align(left + bottom)[#move(dy: 1.0mm)[#line(length: 4mm, stroke: 0.5pt + black)]],
-      align(left, text(size: 8pt)[#name]),
+      align(left + bottom)[#move(dy: 1.0mm)[#line(length: linelength, stroke: 0.5pt + black)]],
+      align(left, text(size: 9pt)[#name]),
     )
   ]
 }
@@ -167,7 +168,7 @@
 = Character 1
 #align(center)[
   #v(1cm)
-  #text(size: 7pt)[#smallcaps[Character 1]]
+  #text(size: 9pt)[#smallcaps[Character 1]]
   #v(40%)
   #line(length: 85%, stroke: .5pt + black)
 ]
@@ -176,13 +177,13 @@
 
 #titledbox([Name], width: 100%, height: 1.2cm)[]
 
-#statbox(dx: 0.6cm, dy: 1.4cm)[Strength]
-#statbox(dx: 2.7cm, dy: 1.4cm)[Dexterity]
-#statbox(dx: 4.8cm, dy: 1.4cm)[Constitution]
+#statbox(dx: 1.2cm, dy: 1.4cm)[Strength]
+#statbox(dx: 3.3cm, dy: 1.4cm)[Dexterity]
+#statbox(dx: 5.4cm, dy: 1.4cm)[Constitution]
 
-#statbox(dx: 0.6cm, dy: 3.9cm)[Intelligence]
-#statbox(dx: 2.7cm, dy: 3.9cm)[Wisdom]
-#statbox(dx: 4.8cm, dy: 3.9cm)[Charisma]
+#statbox(dx: 1.2cm, dy: 3.9cm)[Intelligence]
+#statbox(dx: 3.3cm, dy: 3.9cm)[Wisdom]
+#statbox(dx: 5.4cm, dy: 3.9cm)[Charisma]
 
 #thermo(dx: -0.9cm, dy: 6.8cm)[Proficiency Modifier]
 #thermo(dx: 0.6cm, dy: 8.1cm)[Passive Perception]
@@ -208,37 +209,37 @@
   #v(3.5cm)
   #image("img/standing-human-body-silhouette-svgrepo-com-cc0.svg", width: 50%)
 ]
-#place(dx: 1.2cm, dy: -3.8cm)[
-  #line(start: (0cm, 0cm), end: (2cm, 0.5cm))
+#place(dx: 1.85cm, dy: -4.4cm)[
+  #line(start: (0cm, 0cm), end: (1.9cm, 0.4cm))
 ]
-#place(dx: 6.3cm, dy: -3.8cm)[
-  #line(start: (0cm, 0cm), end: (-2cm, 0.5cm))
+#place(dx: 6.95cm, dy: -4.4cm)[
+  #line(start: (0cm, 0cm), end: (-1.9cm, 0.4cm))
 ]
-#place(dx: 4.9cm, dy: -6.1cm)[
-  #line(start: (0cm, 0cm), end: (-1cm, 2cm))
+#place(dx: 5.55cm, dy: -6.6cm)[
+  #line(start: (0cm, 0cm), end: (-0.9cm, 1.9cm))
 ]
-#place(dx: 2.6cm, dy: -6.1cm)[
-  #line(start: (0cm, 0cm), end: (1cm, 2cm))
+#place(dx: 3.25cm, dy: -6.6cm)[
+  #line(start: (0cm, 0cm), end: (0.9cm, 1.9cm))
 ]
-#place(dx: 1.7cm, dy: -1.3cm)[
-  #line(start: (0cm, 0cm), end: (1.2cm, -0.7cm))
+#place(dx: 2.35cm, dy: -1.8cm)[
+  #line(start: (0cm, 0cm), end: (1.1cm, -0.6cm))
 ]
-#place(dx: 5.8cm, dy: -1.3cm)[
-  #line(start: (0cm, 0cm), end: (-1.2cm, -0.7cm))
+#place(dx: 6.45cm, dy: -1.8cm)[
+  #line(start: (0cm, 0cm), end: (-1.1cm, -0.6cm))
 ]
-#statbox(dx: 1.5cm, dy: 0.5cm)[Intelligence]
-#statbox(dx: 4.0cm, dy: 0.5cm)[Wisdom]
-#statbox(dx: 0.0cm, dy: 3.0cm)[Constitution]
-#statbox(dx: 5.5cm, dy: 3.0cm)[Charisma]
-#statbox(dx: 0.5cm, dy: 5.7cm)[Strength]
-#statbox(dx: 5.0cm, dy: 5.7cm)[Dexterity]
+#statbox(dx: 2.15cm, dy: 0.5cm)[Intelligence]
+#statbox(dx: 4.65cm, dy: 0.5cm)[Wisdom]
+#statbox(dx: 0.65cm, dy: 3.0cm)[Constitution]
+#statbox(dx: 6.15cm, dy: 3.0cm)[Charisma]
+#statbox(dx: 1.0cm, dy: 5.7cm)[Strength]
+#statbox(dx: 5.8cm, dy: 5.7cm)[Dexterity]
 
-// #thermo(dx: -0.9cm, dy: 8.5cm)[Proficiency Modifier]
-// #thermo(dx: 0.6cm, dy: 9.6cm)[Passive Perception]
+#thermo(dx: -0.9cm, dy: 8.5cm)[Proficiency Modifier]
+#thermo(dx: 0.6cm, dy: 9.7cm)[Passive Perception]
 
-#v(1.2cm)
+#v(2.7cm)
 #align(center)[
-  #titledbox([Saving Throws], width: 5.2cm, height: 2.3cm)[
+  #titledbox([Saving Throws], width: 5.3cm, height: 2.3cm)[
     #columns(2)[
       #skillline[Strength]
       #skillline[Dexterity]
@@ -254,41 +255,78 @@
 
 == Skills & Proficiencies
 
-#titledbox([Skills], width: 100%, height: 5.7cm)[
-  #columns(2)[
-    #skillline[Acrobatics (Dex)]
-    #skillline[Animal Handling (Wis)]
-    #skillline[Arcana (Int)]
-    #skillline[Athletics (Str)]
-    #skillline[Deception (Cha)]
-    #skillline[History (Int)]
-    #skillline[Insight (Wis)]
-    #skillline[Intidimation (Cha|Str)]
-    #skillline[Investigation (Int)]
-    #skillline[Medicine (Wis)]
-    #skillline[Nature (Int)]
-    #skillline[Perception (Wis)]
-    #skillline[Performance (Cha)]
-    #skillline[Persuasion (Cha)]
-    #skillline[Religion (Int)]
-    #skillline[Sleight of Hand (Dex)]
-    #skillline[Stealth (Dex)]
-    #skillline[Survival (Wis)]
+#align(center)[
+  #titledbox([Skills], width: 90%, height: 6.1cm)[
+    #columns(2)[
+      #skillline[Acrobatics (Dex)]
+      #skillline[Animal Handling (Wis)]
+      #skillline[Arcana (Int)]
+      #skillline[Athletics (Str)]
+      #skillline[Deception (Cha)]
+      #skillline[History (Int)]
+      #skillline[Insight (Wis)]
+      #skillline[Intidimation (Cha|Str)]
+      #skillline[Investigation (Int)]
+      #skillline[Medicine (Wis)]
+      #skillline[Nature (Int)]
+      #skillline[Perception (Wis)]
+      #skillline[Performance (Cha)]
+      #skillline[Persuasion (Cha)]
+      #skillline[Religion (Int)]
+      #skillline[Sleight of Hand (Dex)]
+      #skillline[Stealth (Dex)]
+      #skillline[Survival (Wis)]
+    ]
+  ]
+
+  #v(3mm)
+
+  #titledbox([Tool & Other Proficiencies], width: 90%, height: 6cm)[
+    #grid(
+      columns: (1fr, 1fr),
+      column-gutter: 2mm,
+      inset: (top: 4mm),
+      rect(fill: lines(spacing: 6mm), width: 100%, height: 95%),
+      rect(fill: lines(spacing: 6mm), width: 100%, height: 95%),
+    )
   ]
 ]
 
-#v(3mm)
+#pagebreak()
 
-#titledbox([Proficiencies], width: 100%, height: 6cm)[
-  #grid(
-    columns: (1fr, 1fr),
-    column-gutter: 2mm,
-    inset: (top: 4mm),
-    rect(fill: lines(spacing: 6mm), width: 100%, height: 95%),
-    rect(fill: lines(spacing: 6mm), width: 100%, height: 95%),
-  )
+#align(center)[
+  #titledbox([Language Proficiencies], width: 100%, skip: 0mm)[
+    #grid(
+      columns: (1fr, 1fr, 1fr),
+      column-gutter: 2mm,
+      inset: (top: 4mm,),
+      skillline([Common], linelength: 0mm),
+      skillline([Dwarvish], linelength: 0mm),
+      skillline([Elvish], linelength: 0mm),
+      skillline([Giant], linelength: 0mm),
+      skillline([Gnomish], linelength: 0mm),
+      skillline([Goblin], linelength: 0mm),
+      skillline([Halfling], linelength: 0mm),
+      skillline([Orc], linelength: 0mm),
+      skillline([Abyssal], linelength: 0mm),
+      skillline([Celestial], linelength: 0mm),
+      skillline([Draconic], linelength: 0mm),
+      skillline([Deep Speech], linelength: 0mm),
+      skillline([Infernal], linelength: 0mm),
+      skillline([Primordial], linelength: 0mm),
+      skillline([Sylvan], linelength: 0mm),
+      skillline([Undercommon], linelength: 0mm),
+      skillline(([#move(dy: 2.4mm)[#line(length: 20mm, stroke: 0.5pt + black)]]), linelength: 0mm),
+      skillline(([#move(dy: 2.4mm)[#line(length: 20mm, stroke: 0.5pt + black)]]), linelength: 0mm),
+      skillline(([#move(dy: 2.5mm)[#line(length: 20mm, stroke: 0.5pt + black)]]), linelength: 0mm),
+      skillline(([#move(dy: 2.5mm)[#line(length: 20mm, stroke: 0.5pt + black)]]), linelength: 0mm),
+      skillline(([#move(dy: 2.5mm)[#line(length: 20mm, stroke: 0.5pt + black)]]), linelength: 0mm),
+      skillline(([#move(dy: 2.5mm)[#line(length: 20mm, stroke: 0.5pt + black)]]), linelength: 0mm),
+      skillline(([#move(dy: 2.5mm)[#line(length: 20mm, stroke: 0.5pt + black)]]), linelength: 0mm),
+      skillline(([#move(dy: 2.5mm)[#line(length: 20mm, stroke: 0.5pt + black)]]), linelength: 0mm)
+    )
+  ]
 ]
-
 
 #pagebreak()
 
