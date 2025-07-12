@@ -21,14 +21,19 @@
   ]
 }
 
+// A5 paper size per Typst source code is 148x210 mm:
+// https://github.com/typst/typst/blob/0264534928864c7aed0466d670824ac0ce5ca1a8/crates/typst-library/src/layout/page.rs#L770
+// A4 is 210x297 mm.
+// Out target size is 12x16 cm, so we need to add to our margins accordingly.
+// Inside margin needs to be the final value, though, to make sure there is
+// no additional spacing between the pages when printing.
 #set page(
-  width: 12cm,
-  height: 16cm,
+  paper: "a5",
   numbering: "- 1 -",
   margin: (
-    inside: 2.0cm,
-    outside: 1.2cm,
-    y: 1.2cm
+    inside: 20mm,
+    outside: 8mm + 10mm,
+    y: 25mm + 10mm // 210 - 25 - 25 = 160
   ),
 )
 
